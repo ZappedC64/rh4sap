@@ -38,11 +38,6 @@ echo -ne "${cyan}Reloading RPM database. "
 yum check-update &> /dev/null
 echo -e "${green}[done]${nc}"
 
-# Remove newer tuned because -sapconf- wants one rev older
-# I think that the repository is borked but I don't have time
-# to deal with that right now.
-# rpm -e tuned-2.7.1-3.el7_3.2 &> /dev/null
-#
 # Install packages
 echo -e "\n${cyan}Checking for SAP prerequisites:${nc}"
 # I put the 'sleep' in so the user can see what is happening. The process is actually really fast.
